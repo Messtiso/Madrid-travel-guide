@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --navy: #223447;
+    --slate: #415b76;
+    --accent: #6f8fb4;
+    --background: #eef2f6;
+    --card: #f8fafc;
+    --soft-card: #ffffff;
+    --text: #2c3440;
+    --muted: #5f6f7f;
+    --border: #e6ebf1;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background: var(--background);
+    color: var(--text);
+}
+
+header {
+    background: linear-gradient(135deg, var(--navy), var(--slate));
+    color: #fff;
+    text-align: center;
+    padding: 38px 20px 32px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 999px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1120px;
+    margin: 32px auto;
+    padding: 0 20px;
+}
+
+.intro,
+.places-list,
+.transport-info,
+.travel-tips {
+    background: var(--card);
+    padding: 32px;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(34, 52, 71, 0.12);
+}
+
+.intro {
+    text-align: center;
+}
+
+h2,
+.places-list h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--navy);
+}
+
+.intro h2,
+.transport-info h2,
+.travel-tips h2,
+.places-list h1 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.intro-content {
+    max-width: 720px;
+    margin: 0 auto 26px;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.intro-image {
+    width: 100%;
+    max-height: 460px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-top: 18px;
+    box-shadow: 0 10px 25px rgba(34, 52, 71, 0.18);
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.reviews article,
+.place {
+    background: var(--soft-card);
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 30px rgba(34, 52, 71, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reviews article:hover,
+.place:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(34, 52, 71, 0.18);
+}
+
+.reviews img,
+.place img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.reviews p {
+    padding: 18px 20px;
+    font-style: italic;
+    color: var(--text);
+}
+
+.places-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px;
+}
+
+.places-list h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.place {
+    padding-bottom: 20px;
+}
+
+.place h2 {
+    padding: 18px 20px 12px;
+    color: var(--navy);
+    font-size: 1.8rem;
+}
+
+.place p {
+    padding: 0 20px 10px;
+    color: #4b5563;
+}
+
+.transport-info,
+.travel-tips {
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.transport-info p,
+.travel-tips p {
+    margin-bottom: 20px;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin: 26px 0;
+}
+
+.icons img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    background: #fff;
+    padding: 14px;
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(34, 52, 71, 0.14);
+}
+
+.transport-info ul,
+.travel-tips ul {
+    list-style: none;
+}
+
+.transport-info li,
+.travel-tips li {
+    background: var(--soft-card);
+    margin-bottom: 12px;
+    padding: 15px 18px;
+    border-left: 5px solid var(--accent);
+    border-radius: 12px;
+    color: var(--text);
+}
+
+.transport-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.transport-card {
+    background: var(--soft-card);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--accent);
+    box-shadow: 0 10px 24px rgba(34, 52, 71, 0.11);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transport-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 34px rgba(34, 52, 71, 0.16);
+}
+
+.transport-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--navy);
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+.transport-card p {
+    margin: 0;
+    color: #4b5563;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.footer-container {
+    background: var(--navy);
+    color: #fff;
+    text-align: center;
+    padding: 18px;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.3rem;
+    }
+
+    .reviews,
+    .places-list,
+    .transport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro,
+    .places-list,
+    .transport-info,
+    .travel-tips {
+        padding: 24px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 7px 12px;
+    }
+}
+
+
+
+
+
