@@ -6,7 +6,7 @@ A multi-page travel website created as part of my early web development studies 
 
 View the website here:
 
-https://messtiso.github.io/madrid-travel-guide/
+https://messtiso.github.io/Madrid-travel-guide/index.html
 
 ## Features
 
